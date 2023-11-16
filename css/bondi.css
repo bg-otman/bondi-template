@@ -1,0 +1,190 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --white: white;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: var(--dark);
+}
+.navbar .navbar-nav .nav-link {
+  color: var(--white);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:is(:hover, :focus) {
+  color: var(--green);
+}
+.navbar-brand {
+  color: var(--white);
+}
+.search svg {
+  color: var(--green);
+  border-left: 1px solid var(--green);
+}
+.navbar-toggler {
+  color: var(--white);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: 3px solid var(--green);
+}
+
+.landing {
+  background-color: var(--dark);
+  height: calc(100vh - 56px);
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  font-weight: bold;
+}
+.main-btn:is(:hover, :focus) {
+  background-color: #ca3b50;
+  color: var(--yellow-color);
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+  transform: translate(-50%);
+}
+
+.feature .content .icon-holder {
+  height: 200px;
+}
+.feature .content .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.feature .content .icon-holder svg:last-child {
+  color: var(--green);
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 90px;
+}
+.content h3 {
+  color: var(--yellow-color);
+}
+
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio .nav .nav-link {
+  font-weight: bold;
+  color: var(--dark);
+}
+.portfolio .nav .nav-link:hover {
+  color: var(--red-color);
+}
+.portfolio .nav .active,
+.portfolio .nav .active:is(:hover, :focus) {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.portfolio .row div::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 25px);
+  height: 100%;
+  background-color: #33d1ccea;
+  border-radius: 5px;
+  transition: 0.3s;
+  transform: translateX(-120%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--white);
+}
+.portfolio .row div:hover::before {
+  transform: translateX(0);
+}
+
+.about .main-title + p {
+  max-width: 500px;
+}
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team .container h2 {
+  color: var(--yellow-color);
+}
+
+.team .container .row div {
+  max-width: 500px;
+}
+
+.project {
+  background-color: var(--dark);
+}
+
+.sub {
+  background-color: var(--yellow-color);
+  height: 170px;
+}
+.sub label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sub input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--dark);
+}
+.sub input::placeholder {
+  color: var(--white);
+}
+.btn-container button {
+  background-color: var(--dark);
+  color: var(--yellow-color);
+}
+.btn-container button:is(:hover, :focus) {
+  background-color: #1c3863;
+}
+
+.footer {
+  background-color: var(--dark);
+}
+.footer h4 {
+  color: var(--white);
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-top: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer ul li:is(:hover, :focus) {
+  color: var(--section-color);
+}
+
+.green {
+  color: var(--green);
+}
+.yellow {
+  color: var(--yellow-color);
+}
